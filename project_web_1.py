@@ -2,22 +2,22 @@
 from tkinter import *
 
 # initialize window
-root = Tk()
-root.geometry('500x300')
-root.resizable(0, 0)
-root.title("TechVidvan - Website Blocker")
+blocker = Tk()
+blocker.geometry('500x300')
+blocker.resizable(0, 0)
+blocker.title("TechVidvan - Website Blocker")
 
 # heading
-Label(root, text='WEBSITE BLOCKER', font='arial 20 bold').pack()
-Label(root, text='TechVidvan', font='arial 20 bold').pack(side=BOTTOM)
+Label(blocker, text='WEBSITE BLOCKER', font='arial 20 bold').pack()
+Label(blocker, text='TechVidvan', font='arial 20 bold').pack(side=BOTTOM)
 
-# path of our host file ang ip adsdress
+# path of our host file ang ip address
 host_path = 'C:\Windows\System32\drivers\etc\hosts'
 ip_address = '127.0.0.1'
 
 # ENTER WEBSITE
-Label(root, text='Enter Website :', font='arial 13 bold').place(x=5, y=60)
-Websites = Text(root, font='arial 10', height='2', width='40', wrap=WORD, padx=5, pady=5)
+Label(blocker, text='Enter Website :', font='arial 13 bold').place(x=5, y=60)
+Websites = Text(blocker, font='arial 10', height='2', width='40', wrap=WORD, padx=5, pady=5)
 Websites.place(x=140, y=60)
 
 
@@ -36,9 +36,9 @@ def Blocker():
                 Label(root, text="Blocked", font='arial 12 bold').place(x=230, y=200)
 
 
-block_btn = Button(root, text='BLOCK', font='arial 12 bold', command=Blocker, width=6, bg='royal blue1',
+block_btn = Button(blocker, text='BLOCK', font='arial 12 bold', command=Blocker, width=6, bg='royal blue1',
                    activebackground='sky blue')
 block_btn.place(x=230, y=150)
 
-root.mainloop
+blocker.mainloop()
 
